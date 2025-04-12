@@ -1,0 +1,172 @@
+%-------------------------
+% Resume in Latex
+% Author : Aditya
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Aditya Reddy} \\ \vspace{1pt}
+    \small \href{mailto:adityareddy400@gmail.com}{\underline{adityareddy400@gmail.com}} $|$ 
+    \href{mailto:aditya.2429030068@muj.manipal.edu}{\underline{aditya.2429030068@muj.manipal.edu}} $|$
+    \href{https://github.com/Aditya-1020}{\underline{github.com/Aditya-1020}} $|$
+    \href{https://aditya-1020.github.io}{\underline{aditya-1020.github.io}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Manipal University Jaipur}{Jaipur, India}
+      {Bachelor of Technology in Electronics and Communication Engineering}{2024 -- 2028 (expected)}
+    \resumeSubheading
+      {Army Public School Bolarum}{Secunderabad, India}
+      {Coursework: PCMB, Artificial Intelligence}{2014 -- 2023}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {IgniteXL Ventures}{Remote}
+      {IgniteXL Remote Extern}{Sep 2023 -- Oct 2023}
+      \resumeItemListStart
+        \resumeItem{Researched and evaluated early-stage start-ups in longevity tech to assess alignment with IgniteXL’s investment thesis}
+        \resumeItem{Designed an investment summary document presenting key information to potential investors}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{Hamming (7,4) Error Correcting Code} $|$ \emph{C, Verilog}}{\href{https://github.com/Aditya-1020/Hamming_7-4}{GitHub Link}}
+        \resumeItemListStart
+          \resumeItem{Implemented the Hamming (7,4) error correcting code to detect and correct errors in 4-bit data blocks.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Laplacian Edge Detection} $|$ \emph{C}}{\href{https://github.com/Aditya-1020/Laplacian-edge}{GitHub Link}}
+        \resumeItemListStart
+          \resumeItem{Used the Laplacian operator to detect edges in grayscale images for image processing tasks.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Sudoku Solver} $|$ \emph{C}}{\href{https://github.com/Aditya-1020/sudoku_solver}{GitHub Link}}
+        \resumeItemListStart
+          \resumeItem{Developed a fully functional Sudoku puzzle generator and solver in C with a backtracking algorithm.}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------ACTIVITIES & EXTRACURRICULARS-----------
+\section{Activities \& Extracurriculars}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Elicit Hacks 9.0 MUJ Hackathon}{October 2024}
+      {}{}
+    \resumeSubheading
+      {Harvard CS50P Certificate}{August 2023}
+      {}{}
+    \resumeSubheading
+      {Volunteer – Bison Asha School}{May 2021 -- August 2023}
+      {}{}
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming}{: C, Python, Arduino, Verilog} \\
+     \textbf{Research and Analysis}{: Deal sourcing and analysis project experience}
+    }}
+ \end{itemize}
+
+%-----------INTERESTS-----------
+\section{Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Electrical Engineering – Focus on Digital Design and FPGAs \\
+     Low-Level Programming
+    }}
+ \end{itemize}
+
+\end{document}
