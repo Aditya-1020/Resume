@@ -1,0 +1,171 @@
+%-------------------------
+% Resume in Latex
+% Author : Aditya
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Aditya Reddy} \\ \vspace{1pt}
+    \small \href{mailto:adityareddy400@gmail.com}{\underline{adityareddy400@gmail.com}} $|$ 
+    \href{mailto:aditya.2429030068@muj.manipal.edu}{\underline{aditya.2429030068@muj.manipal.edu}} $|$
+    \href{https://github.com/Aditya-1020}{\underline{github.com/Aditya-1020}} $|$
+    \href{https://aditya-1020.github.io}{\underline{aditya-1020.github.io}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\begin{itemize}[leftmargin=*, itemsep=1pt]
+  \item \textbf{Manipal University Jaipur}, Jaipur, India \hfill \textit{2024 -- 2028 (expected)}  
+  \newline Bachelor of Technology in Electronics and Communication Engineering
+  \item \textbf{Army Public School Bolarum}, Secunderabad, India \hfill \textit{2014 -- 2023}  
+  \newline Coursework: PCMB, Artificial Intelligence
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {IgniteXL Ventures}{Remote}
+      {IgniteXL Remote Extern}{Sep 2023 -- Oct 2023}
+      \resumeItemListStart
+        \resumeItem{Analyzed 50+ early-stage companies in longevity tech, created investment frameworks that influenced \$2M+ funding decisions}
+        \resumeItem{Researched and evaluated start-ups to assess alignment with IgniteXL’s investment thesis}
+        \resumeItem{Designed an investment summary document presenting key information to potential investors}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+  
+    \resumeProjectHeading
+        {\textbf{Criver: Minimal HTTP/1.1 Web Server} $|$ \emph{C, POSIX Sockets}}{\href{https://github.com/Aditya-1020/Criver}{GitHub Link}}
+        \resumeItemListStart
+          \resumeItem{Built a custom HTTP/1.1 web server from scratch using raw POSIX sockets and standard C, with zero external dependencies.}
+          \resumeItem{Implemented full request parsing, static file serving with MIME type detection, and directory traversal protection.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Hamming (7,4) Error Correcting Code} $|$ \emph{C, Verilog}}{\href{https://github.com/Aditya-1020/Hamming_7-4}{GitHub Link}}
+        \resumeItemListStart
+          \resumeItem{Designed a Hamming (7,4) encoder/decoder in C and Verilog to detect and correct single-bit errors in data transmission.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Laplacian Edge Detection} $|$ \emph{C}}{\href{https://github.com/Aditya-1020/Laplacian-edge}{GitHub Link}}
+        \resumeItemListStart
+          \resumeItem{Developed an image processing tool in C using the Laplacian operator to detect intensity discontinuities in grayscale images.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Sudoku Solver and Generator} $|$ \emph{C}}{\href{https://github.com/Aditya-1020/sudoku_solver}{GitHub Link}}
+        \resumeItemListStart
+          \resumeItem{Implemented a backtracking-based Sudoku solver in C with puzzle generation and difficulty tuning capabilities.}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------ACTIVITIES & EXTRACURRICULARS-----------
+\section{Activities \& Extracurriculars}
+\begin{itemize}[leftmargin=*, itemsep=1pt]
+  \item \textbf{Elicit Hacks 9.0 MUJ Hackathon} \hfill \textit{October 2024}
+  \item \textbf{Harvard CS50P Certificate} \hfill \textit{August 2023}
+  \item \textbf{Volunteer – Bison Asha School} \hfill \textit{May 2021 -- August 2023}
+\end{itemize}
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Programming}{: C, Python, Verilog, SystemVerilog, Bash} \\
+    \textbf{Tools and Frameworks}{: Git, Make, Linux CLI, GCC, Shell scripting, LaTeX, GTKWave, Verilator, Icarus Verilog, RISC-V Toolchain}
+  }}
+\end{itemize}
+
+%-----------INTERESTS-----------
+\section{Interests}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    Hardware-Software Co-design, Embedded Systems, Custom CPU Design, Digital Design with HDL, Operating Systems, FPGA, System Programming, Open Hardware
+  }}
+\end{itemize}
+
+\end{document}
