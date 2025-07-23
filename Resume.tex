@@ -18,6 +18,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
+\usepackage{textgreek}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -103,36 +104,35 @@
 %-----------PROJECTS-----------
 \section{Projects}
   \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Low Latency Trading Gateway} $|$ \emph{C++, FIX Protocol, Lock-Free Programming}}{\href{https://github.com/Aditya-1020/tik}{GitHub Link}}
+      \resumeItemListStart
+        \resumeItem{Built a high-performance trading system in C++ with lock-free queues, memory pools, and CPU pinning to eliminate latency bottlenecks.}
+        \resumeItem{Implemented zero-copy FIX protocol parsing using \textbf{state machines} and \textbf{string views}, achieving \textbf{sub-2μs} parser efficiency with \textbf{1.4μs average}.}
+        \resumeItem{Optimized tick-to-trade latency to \textbf{10-15 microseconds average} with \textbf{2.8μs minimum}, processing \textbf{400+ messages} at \textbf{98\% execution rate}.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{HTTP/1.1 Web Server} $|$ \emph{C, POSIX Sockets, Multithreading}}{\href{https://github.com/Aditya-1020/Criver}{GitHub Link}}
+      \resumeItemListStart
+        \resumeItem{Built a custom HTTP/1.1 server from scratch in C using raw POSIX sockets and a thread pool architecture, with zero external dependencies.}
+        \resumeItem{Implemented full HTTP request parsing, static file serving, MIME type detection, and protection against directory traversal attacks.}
+        \resumeItem{Benchmarked with ApacheBench: sustained \textbf{11.5K+ requests/sec} and \textbf{8.7ms average latency} under \textbf{100 concurrent clients}.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Laplacian Edge Detection} $|$ \emph{C}}{\href{https://github.com/Aditya-1020/Laplacian-edge}{GitHub Link}}
+      \resumeItemListStart
+        \resumeItem{Developed an image processing tool in C using the Laplacian operator to detect intensity discontinuities in grayscale images.}
+      \resumeItemListEnd
+
     % \resumeProjectHeading
-  %     {\textbf{Custom RISC-V Processor} $|$ \emph{SystemVerilog, RISC-V Toolchain}}{\href{https://github.com/Aditya-1020/custom-riscv}{GitHub Link}}
-  %     \resumeItemListStart
-  %       \resumeItem{Currently developing a 32-bit RISC-V processor in SystemVerilog with instruction fetch, decode, execute, and memory stages.}
-  %       \resumeItem{Using Icarus Verilog/Verilator for simulation and verifying correctness with test binaries from \texttt{riscv64-unknown-elf-gcc}.}
-  %       \resumeItem{Debugging instruction execution via GTKWave; implementing edge-case control flow tests and instruction coverage checks.}
-  %       \resumeItem{Planned enhancements: pipelining, branch prediction, CSR support, and eventually a minimal out-of-order backend.}
-  %     \resumeItemListEnd
-    \resumeProjectHeading
-  {\textbf{HTTP/1.1 Web Server} $|$ \emph{C, POSIX Sockets, Multithreading}}{\href{https://github.com/Aditya-1020/Criver}{GitHub Link}}
-  \resumeItemListStart
-    \resumeItem{Built a custom HTTP/1.1 server from scratch in C using raw POSIX sockets and a thread pool architecture, with zero external dependencies.}
-    \resumeItem{Implemented full HTTP request parsing, static file serving, MIME type detection, and protection against directory traversal attacks.}
-    \resumeItem{Benchmarked with ApacheBench: sustained \textbf{11.5K+ requests/sec} and \textbf{8.7ms average latency} under \textbf{100 concurrent clients}.}
-  \resumeItemListEnd
-    \resumeProjectHeading
-        {\textbf{Hamming (7,4) Error Correcting Code} $|$ \emph{C, Verilog}}{\href{https://github.com/Aditya-1020/Hamming_7-4}{GitHub Link}}
-        \resumeItemListStart
-          \resumeItem{Designed a Hamming (7,4) encoder/decoder in C and Verilog to detect and correct single-bit errors in data transmission.}
-        \resumeItemListEnd
-    \resumeProjectHeading
-        {\textbf{Laplacian Edge Detection} $|$ \emph{C}}{\href{https://github.com/Aditya-1020/Laplacian-edge}{GitHub Link}}
-        \resumeItemListStart
-          \resumeItem{Developed an image processing tool in C using the Laplacian operator to detect intensity discontinuities in grayscale images.}
-        \resumeItemListEnd
-    \resumeProjectHeading
-        {\textbf{Sudoku Solver and Generator} $|$ \emph{C}}{\href{https://github.com/Aditya-1020/sudoku_solver}{GitHub Link}}
-        \resumeItemListStart
-          \resumeItem{Implemented a backtracking-based Sudoku solver in C with puzzle generation and difficulty tuning capabilities.}
-        \resumeItemListEnd
+      % {\textbf{Sudoku Solver and Generator} $|$ \emph{C} {\href{https://github.com/Aditya-% 1020/sudoku_solver}{GitHub Link}}
+      % \resumeItemListStart
+        % \resumeItem{Implemented a backtracking-based Sudoku solver in C with puzzle generation and difficulty tuning capabilities.}
+    %   \resumeItemListEnd
+
   \resumeSubHeadingListEnd
 
 %-----------ACTIVITIES & EXTRACURRICULARS-----------
