@@ -13,6 +13,7 @@
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
+\usepackage{latexsym}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
@@ -97,6 +98,7 @@
 \begin{itemize}[leftmargin=*, itemsep=1pt]
   \item \textbf{Manipal University Jaipur}, Jaipur, India \hfill \textit{2024 -- 2028}  
   \newline Bachelor of Technology in Electronics and Communication Engineering \hfill \textit{Jaipur, Rajasthan}  
+  \newline \textit{Relevant Coursework: Digital Design, Signals and Systems, Linear Integrated Circuits}
 \end{itemize}
 %-----------EXPERIENCE-----------
 % \section{Experience}
@@ -108,24 +110,26 @@
     \resumeProjectHeading
       {\textbf{Low Latency Trading Gateway} $|$ \emph{C++, FIX Protocol, Lock-Free Programming}}{\href{https://github.com/Aditya-1020/tik}{GitHub Link}}
       \resumeItemListStart
-        \resumeItem{Built a high-performance trading system in C++ with lock-free queues, memory pools, and CPU pinning to eliminate latency bottlenecks.}
-        \resumeItem{Implemented zero-copy FIX protocol parsing using \textbf{state machines} and \textbf{string views}, achieving \textbf{sub-2μs} parser efficiency with \textbf{1.4μs average}.}
-        \resumeItem{Optimized tick-to-trade latency to \textbf{10-15 microseconds average} with \textbf{2.8μs minimum}, processing \textbf{400+ messages} at \textbf{98\% execution rate}.}
+        \resumeItem{Engineered a high-performance trading gateway in C++ using lock-free queues, memory pools, and CPU pinning to eliminate synchronization and scheduling bottlenecks.}
+        \resumeItem{Implemented zero-copy FIX protocol parsing with \textbf{state machines} and \textbf{string views}, achieving \textbf{sub-2μs} parsing efficiency with \textbf{1.4μs average latency}.}
+        \resumeItem{Optimized tick-to-trade latency to \textbf{10–15μs average} with \textbf{2.8μs minimum}, sustaining throughput of \textbf{400+ messages} at a \textbf{98\% execution rate}.}
       \resumeItemListEnd
 
     \resumeProjectHeading
       {\textbf{HTTP/1.1 Web Server} $|$ \emph{C, POSIX Sockets, Multithreading}}{\href{https://github.com/Aditya-1020/Criver}{GitHub Link}}
       \resumeItemListStart
-        \resumeItem{Built a custom HTTP/1.1 server from scratch in C using raw POSIX sockets and a thread pool architecture, with zero external dependencies.}
-        \resumeItem{Implemented full HTTP request parsing, static file serving, MIME type detection, and protection against directory traversal attacks.}
-        \resumeItem{Benchmarked with ApacheBench: sustained \textbf{11.5K+ requests/sec} and \textbf{8.7ms average latency} under \textbf{100 concurrent clients}.}
+        \resumeItem{Architected a custom HTTP/1.1 server entirely in C with raw POSIX sockets and a thread pool architecture, removing reliance on external libraries.}
+        \resumeItem{Implemented complete HTTP request parsing, static file serving, MIME type detection, and robust safeguards against directory traversal exploits.}
+        \resumeItem{Benchmarked with ApacheBench: sustained \textbf{11.5K+ requests/sec} and achieved \textbf{8.7ms average latency} under \textbf{100 concurrent clients}.}
       \resumeItemListEnd
 
-    \resumeProjectHeading
-      {\textbf{Laplacian Edge Detection} $|$ \emph{C}}{\href{https://github.com/Aditya-1020/Laplacian-edge}{GitHub Link}}
-      \resumeItemListStart
-        \resumeItem{Developed an image processing tool in C using the Laplacian operator to detect intensity discontinuities in grayscale images.}
-      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+      
+      % \resumeProjectHeading
+      %   {\textbf{Laplacian Edge Detection} $|$ \emph{C}}{\href{https://github.com/Aditya-1020/Laplacian-edge}{GitHub Link}}
+      %   \resumeItemListStart
+      %     \resumeItem{Developed an image processing tool in C using the Laplacian operator to detect intensity discontinuities in grayscale images.}
+      %   \resumeItemListEnd
 
     % \resumeProjectHeading
       % {\textbf{Sudoku Solver and Generator} $|$ \emph{C} {\href{https://github.com/Aditya-% 1020/sudoku_solver}{GitHub Link}}
@@ -140,15 +144,15 @@
 \begin{itemize}[leftmargin=*, itemsep=1pt]
   \item Qualified to penultimate round at \textbf{Elicit Hacks 9.0 (MUJ)}, 
   \item Completed the \textbf{Harvard CS50P Certificate} in Python programming, focusing on problem solving, data structures, and I/O systems.
-  \item Volunteered at \textbf{Bison Asha School for Special Needs}, assisting in educational activities and organizing inclusive events over two years.
+  \item Volunteered at \textbf{Bison Asha School for Special Needs}, helping with educational activities and organizing inclusive events over two years.
 \end{itemize}
 
 %-----------SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=*, itemsep=1pt]
-  \item \textbf{Languages:} C/C++, Python, Verilog, SystemVerilog, Bash
-  \item \textbf{Developer Tools:} Git, Make, Linux CLI, GCC, Shell scripting, LaTeX, GTKWave
-  \item \textbf{Technologies/Frameworks:} Verilator, Icarus Verilog, RISC-V Toolchain, Vivado, GTKWave
+  \item \textbf{Programming Languages:} C, C++, Python, Verilog, SystemVerilog
+  \item \textbf{Tools \& Environments:} Git, Make, Linux CLI, GCC, Shell Scripting, LaTeX, GTKWave, LTspice
+  \item \textbf{Technologies \& Frameworks:} Verilator, Icarus Verilog, RISC-V Toolchain, Vivado
 \end{itemize}
 
 \end{document}
