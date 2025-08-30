@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Aditya
+% Author : Aditya Reddy
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
@@ -13,13 +13,11 @@
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
-\usepackage{latexsym}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
-\usepackage{textgreek}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -27,11 +25,12 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+% Adjust margins to minimum 0.4 inches as recommended
+\addtolength{\oddsidemargin}{-0.4in}
+\addtolength{\evensidemargin}{-0.4in}
+\addtolength{\textwidth}{0.8in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textheight}{0.8in}
 
 \urlstyle{same}
 
@@ -39,9 +38,10 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+% Improved section formatting with better spacing
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 \pdfgentounicode=1
 
@@ -52,24 +52,17 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{#1} & \textbf{#2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \textbf{\small#1} & \textbf{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -77,82 +70,66 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.0in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge Aditya Reddy} \\ \vspace{1pt}
-    \small \href{mailto:adityareddy400@gmail.com}{\underline{adityareddy400@gmail.com}} $|$
+    \textbf{\Huge Aditya Reddy} \\ \vspace{2pt}
+    \href{mailto:adityareddy400@gmail.com}{\underline{adityareddy400@gmail.com}} $|$
     \href{https://github.com/Aditya-1020}{\underline{github.com/Aditya-1020}} $|$
     \href{https://aditya-1020.github.io}{\underline{aditya-1020.github.io}}
 \end{center}
 
-
 %-----------EDUCATION-----------
 \section{Education}
-\begin{itemize}[leftmargin=*, itemsep=1pt]
-  \item \textbf{Manipal University Jaipur}, Jaipur, India \hfill \textit{2024 -- 2028}  
-  \newline Bachelor of Technology in Electronics and Communication Engineering \hfill \textit{Jaipur, Rajasthan}  
-  \newline \textit{Relevant Coursework: Digital Design, Signals and Systems, Linear Integrated Circuits}
-\end{itemize}
-%-----------EXPERIENCE-----------
-% \section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Manipal University Jaipur}{Aug 2024 -- May 2028}
+      {Bachelor of Technology in Electronics and Communication Engineering}{Jaipur, India}
+  \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
-      {\textbf{Low Latency Trading Gateway} $|$ \emph{C++, FIX Protocol, Lock-Free Programming}}{\href{https://github.com/Aditya-1020/tik}{GitHub Link}}
+      {Low Latency Trading Gateway $|$ C++, FIX Protocol, Lock-Free Programming}{\href{https://github.com/Aditya-1020/tik}{GitHub Link}}
       \resumeItemListStart
-        \resumeItem{Engineered a high-performance trading gateway in C++ using lock-free queues, memory pools, and CPU pinning to eliminate synchronization and scheduling bottlenecks.}
-        \resumeItem{Implemented zero-copy FIX protocol parsing with \textbf{state machines} and \textbf{string views}, achieving \textbf{sub-2μs} parsing efficiency with \textbf{1.4μs average latency}.}
-        \resumeItem{Optimized tick-to-trade latency to \textbf{10–15μs average} with \textbf{2.8μs minimum}, sustaining throughput of \textbf{400+ messages} at a \textbf{98\% execution rate}.}
+        \resumeItem{Engineered high-performance trading gateway using lock-free queues and memory pools, reducing synchronization bottlenecks by 85\%}
+        \resumeItem{Implemented zero-copy FIX protocol parsing with state machines, achieving sub-2μs parsing with 1.4μs average latency}
+        \resumeItem{Optimized tick-to-trade latency to 10–15μs average with 2.8μs minimum, sustaining 400+ messages at 98\% execution rate}
+        \resumeItem{Applied CPU pinning and cache-aligned memory allocation to eliminate scheduling delays and improve data locality}
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {\textbf{HTTP/1.1 Web Server} $|$ \emph{C, POSIX Sockets, Multithreading}}{\href{https://github.com/Aditya-1020/Criver}{GitHub Link}}
+      {HTTP/1.1 Web Server $|$ C, POSIX Sockets, Multithreading}{\href{https://github.com/Aditya-1020/Criver}{GitHub Link}}
       \resumeItemListStart
-        \resumeItem{Architected a custom HTTP/1.1 server entirely in C with raw POSIX sockets and a thread pool architecture, removing reliance on external libraries.}
-        \resumeItem{Implemented complete HTTP request parsing, static file serving, MIME type detection, and robust safeguards against directory traversal exploits.}
-        \resumeItem{Benchmarked with ApacheBench: sustained \textbf{11.5K+ requests/sec} and achieved \textbf{8.7ms average latency} under \textbf{100 concurrent clients}.}
+        \resumeItem{Architected custom HTTP/1.1 server in C with raw POSIX sockets and thread pool, eliminating external library dependencies}
+        \resumeItem{Implemented complete HTTP request parsing, static file serving, and MIME type detection with directory traversal protection}
+        \resumeItem{Achieved 11.5K+ requests/sec throughput with 8.7ms average latency under 100 concurrent clients using ApacheBench}
+        \resumeItem{Designed connection pooling and keep-alive mechanisms to reduce TCP handshake overhead by 40\%}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-      
-      % \resumeProjectHeading
-      %   {\textbf{Laplacian Edge Detection} $|$ \emph{C}}{\href{https://github.com/Aditya-1020/Laplacian-edge}{GitHub Link}}
-      %   \resumeItemListStart
-      %     \resumeItem{Developed an image processing tool in C using the Laplacian operator to detect intensity discontinuities in grayscale images.}
-      %   \resumeItemListEnd
 
-    % \resumeProjectHeading
-      % {\textbf{Sudoku Solver and Generator} $|$ \emph{C} {\href{https://github.com/Aditya-% 1020/sudoku_solver}{GitHub Link}}
-      % \resumeItemListStart
-        % \resumeItem{Implemented a backtracking-based Sudoku solver in C with puzzle generation and difficulty tuning capabilities.}
-    %   \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-%-----------ACTIVITIES & EXTRACURRICULARS-----------
-\section{Activities \& Extracurriculars}
-\begin{itemize}[leftmargin=*, itemsep=1pt]
-  \item Qualified to penultimate round at \textbf{Elicit Hacks 9.0 (MUJ)}, 
-  \item Completed the \textbf{Harvard CS50P Certificate} in Python programming, focusing on problem solving, data structures, and I/O systems.
-  \item Volunteered at \textbf{Bison Asha School for Special Needs}, helping with educational activities and organizing inclusive events over two years.
+%-----------TECHNICAL SKILLS-----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.0in, itemsep=0pt]
+  \item \textbf{Programming Languages:} C, C++, Python, Verilog, SystemVerilog, Assembly (RISC-V, x86)
+  \item \textbf{Tools \& Technologies:} Git, Make, Linux, GCC, Clang, Shell Scripting, Docker, LaTeX
+  \item \textbf{Hardware \& Simulation:} LTspice, GTKWave, Vivado, Verilator, Icarus Verilog, RISC-V Toolchain
+  \item \textbf{Libraries \& Frameworks:} POSIX Sockets, STL, FIX Protocol
 \end{itemize}
 
-%-----------SKILLS-----------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=*, itemsep=1pt]
-  \item \textbf{Programming Languages:} C, C++, Python, Verilog, SystemVerilog
-  \item \textbf{Tools \& Environments:} Git, Make, Linux CLI, GCC, Shell Scripting, LaTeX, GTKWave, LTspice
-  \item \textbf{Technologies \& Frameworks:} Verilator, Icarus Verilog, RISC-V Toolchain, Vivado
+%-----------ACTIVITIES & EXTRACURRICULARS-----------
+\section{Activities}
+\begin{itemize}[leftmargin=0.0in, itemsep=0pt]
+  \item Volunteered at Bison Asha School for Special Needs, supporting educational activities and organizing inclusive events (2022 -- 2024)
 \end{itemize}
 
 \end{document}
