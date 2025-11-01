@@ -91,18 +91,39 @@
     \resumeSubheading
       {Manipal University Jaipur}{Aug 2024 -- May 2028}
       {Bachelor of Technology in Electronics and Communication Engineering}{Jaipur, India}
+    \resumeItemListStart
+      \resumeItem{\textbf{Relevant Coursework:} Digital Logic Design, Circuit Analysis, Signals \& Systems}
+    \resumeItemListEnd
   \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.0in, itemsep=2pt]
+  \item \textbf{Hardware Description Languages:} Verilog, SystemVerilog
+  \item \textbf{EDA \& Simulation Tools:} Vivado, Verilator, GTKWave, LTspice
+  \item \textbf{Programming:} C, C++, Python, RISC-V Assembly
+  \item \textbf{Tools/Frameworks:} Git, Make, Linux, GCC, Shell Scripting, RISC-V Toolchain, FIX, STL, Docker, LaTeX
+\end{itemize}
 
 %-----------PROJECTS-----------
 \section{Projects}
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
+    {32-bit RISC-V Pipelined Processor $|$ Verilog, GTKWave}{\href{https://github.com/Aditya-1020/RISC-V}{GitHub Link}}
+    \resumeItemListStart
+      \resumeItem{Designed 5-stage pipelined processor implementing RV32I instruction set with data forwarding and hazard detection logic}
+      \resumeItem{Implemented branch prediction subsystem with 64-entry BTB, 2-bit saturating predictor, and 8-entry return address stack achieving 99.9\% accuracy}
+      \resumeItem{Built comprehensive testbench executing 4,998 instructions across all RV32I operation types, achieving 1.0 CPI and 0.2\% pipeline stall rate on benchmarks}
+      \resumeItem{Verified design through waveform analysis and instruction trace validation using GTKWave and Icarus Verilog}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
       {Low Latency Trading Gateway $|$ C++, FIX Protocol, Lock-Free Programming}{\href{https://github.com/Aditya-1020/tik}{GitHub Link}}
       \resumeItemListStart
         \resumeItem{Engineered high-performance trading gateway using lock-free queues and memory pools, reducing synchronization bottlenecks by 85\%}
-        \resumeItem{Implemented zero-copy FIX protocol parsing with state machines, achieving sub-2μs parsing with 1.4μs average latency}
-        \resumeItem{Optimized tick-to-trade latency to 10–15μs average with 2.8μs minimum, sustaining 400+ messages at 98\% execution rate}
+    \resumeItem{Implemented zero-copy FIX protocol parsing with state machines, achieving sub-2$\mu$s parsing with 1.4$\mu$s average latency}
+    \resumeItem{Optimized tick-to-trade latency to 10--15$\mu$s average with 2.8$\mu$s minimum, sustaining 400+ messages at 98\% execution rate}
         \resumeItem{Applied CPU pinning and cache-aligned memory allocation to eliminate scheduling delays and improve data locality}
       \resumeItemListEnd
 
@@ -117,18 +138,10 @@
 
   \resumeSubHeadingListEnd
 
-%-----------TECHNICAL SKILLS-----------
-\section{Skills}
-\begin{itemize}[leftmargin=0.0in, itemsep=0pt]
-  \item \textbf{Programming Languages:} C, C++, Python, Verilog, SystemVerilog, Assembly (RISC-V, x86)
-  \item \textbf{Tools \& Technologies:} Git, Make, Linux, GCC, Clang, Shell Scripting, Docker, LaTeX
-  \item \textbf{Hardware \& Simulation:} LTspice, GTKWave, Vivado, Verilator, Icarus Verilog, RISC-V Toolchain
-  \item \textbf{Libraries \& Frameworks:} POSIX Sockets, STL, FIX Protocol
-\end{itemize}
-
 %-----------ACTIVITIES & EXTRACURRICULARS-----------
-\section{Activities}
-\begin{itemize}[leftmargin=0.0in, itemsep=0pt]
+\section{Activities \& Interests}
+\begin{itemize}[leftmargin=0.0in, itemsep=2pt]
+  \item \textbf{Research Interests:} Computer Architecture, Low-Power VLSI Design, Hardware Acceleration, Digital Design Optimization, Networking Hardware
   \item Volunteered at Bison Asha School for Special Needs, supporting educational activities and organizing inclusive events (2022 -- 2024)
 \end{itemize}
 
