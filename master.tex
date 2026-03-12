@@ -93,13 +93,14 @@
       \resumeItem{\textbf{Relevant Coursework:} Digital Logic Design, Circuit Analysis, Signals \& Systems, Electronic Devices, Linear Integrated Circuits}
     \resumeItemListEnd
   \resumeSubHeadingListEnd
-s
+
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.0in, itemsep=2pt]
-  \item \textbf{HDL/RTL Design:} Verilog, SystemVerilog
+  \item \textbf{Hardware Description Languages:} Verilog, SystemVerilog
   \item \textbf{Physical Design:} RTL-to-GDS, Floorplanning, Placement \& Route, Static Timing Analysis, DRC/LVS signoff, Antenna repair, PVT corner analysis
-  \item \textbf{EDA \& Tools:} Vivado, OpenLane~2, OpenROAD, Yosys, Magic, KLayout, OpenSTA, Verilator, GTKWave, LTspice; SKY130B (sky130\_fd\_sc\_hd) PDK
+  \item \textbf{EDA \& Implementation Tools:} Vivado, OpenLane~2, OpenROAD, Yosys, Magic, KLayout, OpenSTA, Verilator, GTKWave, LTspice
+  \item \textbf{PDK:} SKY130B (sky130\_fd\_sc\_hd)
   \item \textbf{Programming:} C, C++, Python
   \item \textbf{Tools:} Linux, Git, Make, GCC, RISC-V Toolchain
 \end{itemize}
@@ -115,6 +116,7 @@ s
     \resumeItem{Implemented a 4-state FSM controller sequencing matrix feed over $2N{-}1$ staggered cycles with automatic bank-swap signaling on computation completion}
     \resumeItem{Ran full RTL-to-GDS implementation on SKY130B via OpenLane~2 and OpenROAD: synthesis, floorplan, placement, CTS, global and detailed routing, RC extraction, and signoff}
     \resumeItem{Achieved timing closure at \textbf{76~MHz worst-corner} (SS/HT) and \textbf{137~MHz nominal TT} with \textbf{zero setup, hold, DRC, and LVS violations} across all 9 PVT corners; 18K standard cells, 0.21~mm$^2$ core area}
+    \resumeItem{Analyzed 27 remaining antenna violations post-diode insertion; traced root cause to unoptimized CTS clock stubs on met1 and identified targeted rerouting fix path}
   \resumeItemListEnd
 
   \resumeProjectHeading
@@ -124,7 +126,8 @@ s
     \resumeItem{Built complete hazard detection and forwarding (EX$\rightarrow$EX, MEM$\rightarrow$EX) with load-use stall insertion}
     \resumeItem{Implemented dynamic branch prediction (BTB + Gshare PHT + RAS) reducing control stalls}
     \resumeItem{Integrated hardware multiply and a 32-cycle non-restoring signed/unsigned divider for M-extension arithmetic}
-    \resumeItem{Created assertion-driven verification suites across 8 test cases with 100\% pass rate; added performance counters (cycles, IPC, stalls, branches) for quantitative microarchitectural analysis}
+    \resumeItem{Created assertion-driven verification suites across 8 test cases achieving 100\% pass rate and full functional coverage}
+    \resumeItem{Added performance counters (cycles, IPC, stalls, branches) enabling quantitative microarchitectural analysis}
   \resumeItemListEnd
 
   \resumeProjectHeading
@@ -138,15 +141,24 @@ s
   \resumeProjectHeading
     {Low Latency Trading Gateway $|$ C++, FIX Protocol, Lock-Free Programming}{\href{https://github.com/Aditya-1020/tik}{GitHub}}
   \resumeItemListStart
-    \resumeItem{Engineered lock-free messaging with memory pools and CPU pinning/cache-aligned allocation, reducing synchronization bottlenecks by 85\%"}
+    \resumeItem{Engineered lock-free messaging system using queues and memory pools, reducing synchronization bottlenecks by 85\%}
     \resumeItem{Implemented zero-copy FIX protocol parsing with state machines, achieving sub-2$\mu$s parsing with 1.4$\mu$s average latency}
     \resumeItem{Optimized tick-to-trade latency to 10--15$\mu$s average with 2.8$\mu$s minimum, sustaining 400+ messages at 98\% execution rate}
+    \resumeItem{Applied CPU pinning and cache-aligned memory allocation to eliminate scheduling delays}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {HTTP/1.1 Web Server $|$ C, POSIX Sockets, Multithreading}{\href{https://github.com/Aditya-1020/Criver}{GitHub}}
+  \resumeItemListStart
+    \resumeItem{Built custom HTTP/1.1 multithreaded server in C with raw POSIX sockets and thread pool, no external library dependencies}
+    \resumeItem{Achieved 11.5K+ requests/sec throughput with 8.7ms average latency under 100 concurrent clients using ApacheBench}
+    \resumeItem{Reduced TCP overhead by 40\% using connection pooling and keep-alive mechanisms}
   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
 %-----------ACTIVITIES-----------
-\section{Activities}
+\section{Activities \& Interests}
 \begin{itemize}[leftmargin=0.0in, itemsep=2pt]
   \item Volunteered at Bison Asha School for Special Needs, supporting educational activities and organizing inclusive events (2022 -- 2024)
 \end{itemize}
