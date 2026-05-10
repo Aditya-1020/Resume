@@ -4,9 +4,7 @@
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
-
 \documentclass[letterpaper,11pt]{article}
-
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -18,37 +16,28 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
-
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-\addtolength{\oddsidemargin}{-0.4in}
-\addtolength{\evensidemargin}{-0.4in}
-\addtolength{\textwidth}{0.8in}
-\addtolength{\topmargin}{-.4in}
-\addtolength{\textheight}{0.8in}
-
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.65in}
+\addtolength{\textheight}{1.3in}
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-
 \titleformat{\section}{
-  \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
-
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 \pdfgentounicode=1
 
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{{#1\vspace{-1pt}}}
 }
-
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -57,27 +46,27 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
+% Two-line project heading: {Name}{Link}{Tools/Stack}
+\newcommand{\resumeProjectHeading}[3]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{\small#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.0in]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=0pt, parsep=0pt, topsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
 
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge Aditya Reddy} \\ \vspace{2pt}
+    \textbf{\Huge Aditya Reddy} \\ \vspace{3pt}
     \href{mailto:adityareddy400@gmail.com}{\underline{adityareddy400@gmail.com}} $|$
     \href{https://github.com/Aditya-1020}{\underline{github.com/Aditya-1020}} $|$
     \href{https://aditya-1020.github.io}{\underline{aditya-1020.github.io}}
@@ -85,24 +74,21 @@
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Manipal University Jaipur}{Aug 2024 -- May 2028}
-      {Bachelor of Technology in Electronics and Communication Engineering}{Jaipur, India}
-    \resumeItemListStart
-      \resumeItem{\textbf{Relevant Coursework:} Digital Logic Design, Circuit Analysis, Signals \& Systems, Electronic Devices, Linear Integrated Circuits}
-    \resumeItemListEnd
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Manipal University Jaipur}{Aug 2024 -- Expected May 2028}
+    {Bachelor of Technology, Electronics and Communication Engineering}{Jaipur, India}
+\resumeSubHeadingListEnd
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
-\begin{itemize}[leftmargin=0.0in, itemsep=2pt]
-  \item \textbf{Hardware Description Languages:} Verilog, SystemVerilog
-  \item \textbf{Physical Design:} RTL-to-GDS, Floorplanning, Placement \& Route, Static Timing Analysis, DRC/LVS signoff, Antenna repair, PVT corner analysis
-  \item \textbf{EDA \& Implementation Tools:} Vivado, OpenLane~2, OpenROAD, Yosys, Magic, KLayout, OpenSTA, Verilator, GTKWave, LTspice
-  \item \textbf{PDK:} SKY130B (sky130\_fd\_sc\_hd)
-  \item \textbf{Programming:} C, C++, Python
-  \item \textbf{Tools:} Linux, Git, Make, GCC, RISC-V Toolchain
+\begin{itemize}[leftmargin=0.0in, label={}, itemsep=1pt]
+  \item\small{\textbf{HDL / RTL Design:} SystemVerilog, Verilog}
+  \item\small{\textbf{Physical Design:} RTL-to-GDS flow, Floorplanning, Placement \& Route (PnR), Clock Tree Synthesis (CTS), Static Timing Analysis (STA), DRC/LVS signoff}
+  \item\small{\textbf{EDA \& Tools:} OpenLane~2, OpenROAD, Yosys, Vivado, Magic, KLayout, OpenSTA, SymbiYosys, Verilator, GTKWave, LTspice; SKY130 PDK}
+  \item\small{\textbf{Programming:} C, C++, Python}
+  \item\small{\textbf{Embedded:} ESP32, Raspberry Pi, Arduino}
+  \item\small{\textbf{Systems:} Linux, Git, Make, GCC, RISC-V toolchain, POSIX}
 \end{itemize}
 
 %-----------PROJECTS-----------
@@ -110,57 +96,54 @@
 \resumeSubHeadingListStart
 
   \resumeProjectHeading
-    {AdiSystolic --- 4$\times$4 Systolic Array Accelerator $|$ SystemVerilog, OpenLane~2, SKY130B}{{\href{https://github.com/Aditya-1020/AdiSystolic}{GitHub}}}
+    {Systolic Array Accelerator -- 4$\times$4 Output-Stationary MAC Array}
+    {\href{https://github.com/Aditya-1020/AdiSystolic}{GitHub}}
+    {SystemVerilog, OpenLane~2, SKY130B PDK}
   \resumeItemListStart
-    \resumeItem{Designed a 4$\times$4 output-stationary systolic array in SystemVerilog with 16 pipelined MAC processing elements and a ping-pong input buffer scheme to hide matrix load latency behind compute}
-    \resumeItem{Implemented a 4-state FSM controller sequencing matrix feed over $2N{-}1$ staggered cycles with automatic bank-swap signaling on computation completion}
-    \resumeItem{Ran full RTL-to-GDS implementation on SKY130B via OpenLane~2 and OpenROAD: synthesis, floorplan, placement, CTS, global and detailed routing, RC extraction, and signoff}
-    \resumeItem{Achieved timing closure at \textbf{76~MHz worst-corner} (SS/HT) and \textbf{137~MHz nominal TT} with \textbf{zero setup, hold, DRC, and LVS violations} across all 9 PVT corners; 18K standard cells, 0.21~mm$^2$ core area}
-    \resumeItem{Analyzed 27 remaining antenna violations post-diode insertion; traced root cause to unoptimized CTS clock stubs on met1 and identified targeted rerouting fix path}
+    \resumeItem{Designed a 4$\times$4 systolic array with 16 pipelined Multiply-Accumulate (MAC) processing elements (PEs) and a ping-pong dual-bank register file to overlap BRAM load latency with compute, eliminating inter-matrix stall cycles; validated all 48 FC2 inference tiles cycle-accurate against a golden INT8 MNIST model.}
+    \resumeItem{Ran full RTL-to-GDS on SKY130B via OpenLane~2, diagnosing and resolving hold violations through targeted post-placement buffer insertion; achieved Static Timing Analysis (STA) closure at 76~MHz worst-corner (SS/125\,\textdegree{}C) and 137~MHz nominal (TT/27\,\textdegree{}C) with zero setup, hold, Design Rule Check (DRC), and Layout vs.\ Schematic (LVS) violations across all 9 PVT corners; 18\,K cells, 0.21\,mm$^{2}$ core area.}
   \resumeItemListEnd
 
-  \resumeProjectHeading
-    {AdiRiscV --- RISC-V RV32IM Processor Core $|$ SystemVerilog, Vivado, GTKWave}{}
-  \resumeItemListStart
-    \resumeItem{Designed a synthesizable 5-stage pipelined RISC-V core implementing the full RV32IM ISA}
-    \resumeItem{Built complete hazard detection and forwarding (EX$\rightarrow$EX, MEM$\rightarrow$EX) with load-use stall insertion}
-    \resumeItem{Implemented dynamic branch prediction (BTB + Gshare PHT + RAS) reducing control stalls}
-    \resumeItem{Integrated hardware multiply and a 32-cycle non-restoring signed/unsigned divider for M-extension arithmetic}
-    \resumeItem{Created assertion-driven verification suites across 8 test cases achieving 100\% pass rate and full functional coverage}
-    \resumeItem{Added performance counters (cycles, IPC, stalls, branches) enabling quantitative microarchitectural analysis}
-  \resumeItemListEnd
+  \vspace{0pt}
 
   \resumeProjectHeading
-    {USB-C Battery/Supply Voltage Monitor $|$ Analog Circuit Design, LTspice}{}
+    {RISC-V Processor Core -- RV32IM 5-Stage Pipeline}
+    {\href{https://github.com/Aditya-1020/AdiRiscV}{GitHub}}
+    {SystemVerilog, Vivado, Verilator}
   \resumeItemListStart
-    \resumeItem{Designed multi-threshold LM324 comparator circuit classifying USB-C input into low ($<$4~V), nominal (4--5~V), and optimal ($>$5~V) ranges using LED indicators}
-    \resumeItem{Validated switching behavior and hysteresis-free operation via LTspice DC sweep simulations}
-    \resumeItem{Breadboarded and debugged physical prototype, correlating simulation results with measured hardware}
+    \resumeItem{Implemented a full 5-stage RV32IM pipeline with EX/MEM forwarding, load-use stall insertion, and 28 SystemVerilog Assertions (SVA) at 100\% pass rate across 8 test programs; added single-cycle 64-bit hardware multiply and a 32-cycle non-restoring radix-2 divider that stalls the pipeline via a \texttt{ready} signal, covering all M-extension edge cases.}
+    \resumeItem{Built a 3-component dynamic branch predictor -- 16-entry Branch Target Buffer (BTB), 256-entry Gshare Pattern History Table (PHT), and 4-deep Return Address Stack (RAS) -- synthesised to Artix-7 in Vivado, closing timing at 100~MHz with performance counters quantifying IPC, branch mispredict rate, and stall cycles.}
   \resumeItemListEnd
 
-  \resumeProjectHeading
-    {Low Latency Trading Gateway $|$ C++, FIX Protocol, Lock-Free Programming}{\href{https://github.com/Aditya-1020/tik}{GitHub}}
+  \vspace{0pt}
+
+\resumeProjectHeading
+    {Dual-Clock Asynchronous FIFO -- Formally Verified CDC Design}
+    {\href{https://github.com/Aditya-1020/async}{GitHub}}
+    {Verilog, OpenRAM, SymbiYosys, cocotb}
   \resumeItemListStart
-    \resumeItem{Engineered lock-free messaging system using queues and memory pools, reducing synchronization bottlenecks by 85\%}
-    \resumeItem{Implemented zero-copy FIX protocol parsing with state machines, achieving sub-2$\mu$s parsing with 1.4$\mu$s average latency}
-    \resumeItem{Optimized tick-to-trade latency to 10--15$\mu$s average with 2.8$\mu$s minimum, sustaining 400+ messages at 98\% execution rate}
-    \resumeItem{Applied CPU pinning and cache-aligned memory allocation to eliminate scheduling delays}
+    \resumeItem{Designed a parametric dual-clock FIFO in Verilog with Gray-coded read/write pointers and 2-flop Clock Domain Crossing (CDC) synchronizers; instantiated an OpenRAM pseudo-dual-port SRAM macro (16$\times$64, SKY130) for the storage array, swapped for a combinational stub during formal to bypass non-synthesizable timing constructs.}
+    \resumeItem{Formally verified no-overflow, no-underflow, and CDC safety using SymbiYosys with smtbmc/Boolector --- BMC at depth 128 with \texttt{multiclock on} for the top-level, and k-induction (\texttt{mode prove}) for \texttt{rst\_sync}, \texttt{fifo\_mem}, and \texttt{sync\_fifo} sub-modules; validated with 13 cocotb testcases across \texttt{async\_fifo} and \texttt{fifo\_mem}, covering reset state, full/empty conditions, pointer wraparound, concurrent read/write, and asymmetric clock ratios up to 4:1.}
   \resumeItemListEnd
 
+  \vspace{0pt}
+
   \resumeProjectHeading
-    {HTTP/1.1 Web Server $|$ C, POSIX Sockets, Multithreading}{\href{https://github.com/Aditya-1020/Criver}{GitHub}}
+    {USB-C Supply Voltage Monitor}
+    {}
+    {Analog Circuit Design, LTspice}
   \resumeItemListStart
-    \resumeItem{Built custom HTTP/1.1 multithreaded server in C with raw POSIX sockets and thread pool, no external library dependencies}
-    \resumeItem{Achieved 11.5K+ requests/sec throughput with 8.7ms average latency under 100 concurrent clients using ApacheBench}
-    \resumeItem{Reduced TCP overhead by 40\% using connection pooling and keep-alive mechanisms}
+    \resumeItem{Designed a multi-threshold LM324 op-amp comparator network to classify USB-C rail voltage into three bands ($<$4\,V, 4--5\,V, $>$5\,V) with LED indicators; verified hysteresis-free switching across the full DC sweep in LTspice before confirming on a breadboarded prototype.}
   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
+\vspace{0pt}
+
 %-----------ACTIVITIES-----------
-\section{Activities \& Interests}
-\begin{itemize}[leftmargin=0.0in, itemsep=2pt]
-  \item Volunteered at Bison Asha School for Special Needs, supporting educational activities and organizing inclusive events (2022 -- 2024)
+\section{Activities}
+\begin{itemize}[leftmargin=0in, label={}, itemsep=0pt]
+  \item\small{\textbf{Volunteer} --- Bison Asha School for Special Needs: supported educational activities and organised inclusive events \hfill 2022--2024}
 \end{itemize}
 
 \end{document}
